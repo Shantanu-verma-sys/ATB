@@ -24,7 +24,7 @@ class FetchData:
         self.connection = websocket.WebSocketApp(self.url,
                                                     on_message = lambda ws,msg: self.onMes(ws, msg),
                                                     on_error   = lambda ws,msg: self.onErr(ws, msg),
-                                                    on_close   = lambda ws:     self.Close(ws),
+                                                    on_close   = lambda ws:     self.onClose(ws),
                                                     on_open    = lambda ws:     self.onopen(ws))
         self.callbackMessage = clb
         self.connection.run_forever()
