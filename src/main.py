@@ -19,7 +19,7 @@ def onErr(con,err):
 
 def onMes(con,m):
     val = json.loads(m)["data"]
-    m = {"s":"Symbol ",
+    p = {"s":"Symbol ",
          "i":"Interval ",
          "o":"Open Price ",
          "c":"Close Price ",
@@ -28,10 +28,10 @@ def onMes(con,m):
          "x":"Closed? "
          }
     
-    print(m["s"] + " : " + val["s"])
     for i in val["k"]:
-        if i in m:
-            print(m[i]+" : "+val["k"][i])
+        if i in p:
+            print(p[i]+" : "+str(val["k"][i]))
+    print("-"*20)
         
 
 def onClose(con):
