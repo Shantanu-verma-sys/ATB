@@ -1,4 +1,4 @@
-# ATB (shantanu + shivam)
+# ATB (shantanu + WhiteMagic)
 ## Automatic trading bot
 
 ## Dependenecies 
